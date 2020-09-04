@@ -1,0 +1,501 @@
+.exterior-boundry {
+  /* background-color: greenyellow; */
+}
+#title {
+  width: 400px;
+  height: 150px;
+  margin-left: 450px;
+  font-family: "Kufam", cursive;
+  color: brown;
+  font-size: 30px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+.interior-boundry {
+  visibility: hidden;
+}
+#start_container {
+  margin-top: 50px;
+  margin-left: 600px;
+}
+#start {
+  background-color: rgb(175, 230, 93);
+  height: 20px;
+  border-radius: 20px;
+}
+.controls {
+  margin-left: 550px;
+}
+#resetgame {
+  background-color: rgb(245, 103, 37);
+  height: 20px;
+  border-radius: 20px;
+  visibility: hidden;
+}
+#instruction {
+  margin-top: 100px;
+  margin-left: 300px;
+  font-family: "Kufam", cursive;
+  color: rgb(63, 10, 65);
+}
+#instruct {
+  font-family: "Kufam", cursive;
+  font-size: 30px;
+  color: brown;
+}
+#loose {
+  display: none;
+  margin-left: 550px;
+}
+#win {
+  display: none;
+  margin-left: 550px;
+}
+.interior-boundry {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 35% 35% 30%;
+  grid-template-columns: 80% 20%;
+  border: 5px solid black;
+  width: 1200px;
+  height: 550px;
+  margin: 35px;
+  /* background-color: rgb(116, 235, 116); */
+  z-index: -10;
+}
+
+/* designing egg */
+.egg-class {
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+.egg-class {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  height: 200px;
+  position: relative;
+  /* justify-content: center; */
+  justify-items: center;
+  /* align-items: center; */
+}
+
+.egg {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-row: 3/4;
+  grid-column: 1/2;
+  justify-items: center;
+}
+.adjustment1 {
+  grid-column: 1/2;
+}
+.adjustment2 {
+  grid-column: 2/3;
+}
+.adjustment3 {
+  grid-column: 3/4;
+}
+.adjustment4 {
+  grid-column: 4/5;
+}
+.adjustment5 {
+  grid-column: 5/6;
+}
+.egg_design {
+  width: 30px;
+  height: 80px;
+  position: relative;
+  animation: shake 1s;
+}
+.egg_design::before,
+.egg_design::after {
+  content: "";
+  background: rgb(238, 236, 146);
+  border: 2px solid black;
+  width: 30px;
+  height: 80px;
+  position: absolute;
+}
+.egg_design::before {
+  left: 0px;
+  width: 30px;
+  height: 80px;
+  border-right-color: transparent;
+  border-top-left-radius: 100% 60%;
+  border-bottom-left-radius: 100% 40%;
+}
+.egg_design::after {
+  left: 30px;
+  width: 30px;
+  height: 80px;
+  border-left-color: transparent;
+  border-top-right-radius: 100% 60%;
+  border-bottom-right-radius: 100% 40%;
+}
+/* designing-egg-heating */
+.egg_heating {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-row: 3/4;
+  grid-column: 1/2;
+  justify-items: center;
+  align-items: center;
+}
+/* .egg_heating{
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    width:550px;
+    height: 100px;
+    z-index: -1;
+    flex-direction: row;
+} */
+.egg_heating_design {
+  border: 2px solid black;
+  width: 60px;
+  height: 80px;
+  border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
+  padding: 0px;
+  margin: 0px;
+  z-index: -1;
+  display: none;
+}
+/* .egg_heating_after_design{
+    border: 2px solid black;
+    width: 60px;
+    height:80px;
+    border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
+    padding: 0px;
+    margin:0px;
+    z-index: 5;
+    display: block;
+} */
+.egg_heating_design_hatch {
+  border: 2px solid black;
+  box-sizing: border-box;
+  width: 60px;
+  height: 80px;
+  border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
+  padding: 0px;
+  margin: 0px;
+  /* z-index: 5; */
+  /* display: block; */
+  /* animation-direction: forward;
+  animation-duration: 5s;
+  animation-iteration-count: 1; */
+  /* animation-name: heating_the_egg; */
+  /* animation-timing-function: ease; */
+}
+/* designing-egg-hatching */
+.egg-hatching {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-row: 3/4;
+  grid-column: 1/2;
+  justify-items: center;
+  align-items: center;
+  z-index: -10;
+}
+.egg_hatching_disign {
+  border: 2px solid black;
+  width: 60px;
+  height: 80px;
+  border-top-left-radius: 100% 60%;
+  border-bottom-left-radius: 100% 40%;
+  border-top-right-radius: 100% 60%;
+  border-bottom-right-radius: 100% 40%;
+}
+#hatched1 {
+  display: none;
+}
+#hatched2 {
+  display: none;
+}
+#hatched3 {
+  display: none;
+}
+#hatched4 {
+  display: none;
+}
+#hatched5 {
+  display: none;
+}
+.adjustment {
+  margin: 20px;
+  padding: 20px;
+}
+/* designing stone */
+.falling-object {
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+.falling-object-grid {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 10px;
+  justify-items: center;
+}
+.stone-draw {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  animation-duration: 5s;
+}
+.stone-draw::before,
+.stone-draw::after {
+  position: absolute;
+  content: "";
+  border: 1px solid black;
+  width: 10px;
+  height: 10px;
+}
+.stone-draw::before {
+  left: 0px;
+  border-right-color: transparent;
+  border-top-left-radius: 50% 20%;
+  border-bottom-left-radius: 50% 80%;
+  background-image: linear-gradient(
+    rgb(77, 74, 74),
+    rgb(117, 114, 114),
+    rgb(167, 163, 163)
+  );
+  transform: skewX(5deg);
+}
+.stone-draw::after {
+  left: 10px;
+  border-left-color: transparent;
+  border-top-right-radius: 100% 80%;
+  border-bottom-right-radius: 10% 30%;
+  background-image: linear-gradient(
+    rgb(77, 74, 74),
+    rgb(117, 114, 114),
+    rgb(167, 163, 163)
+  );
+}
+/* #stone1{
+} */
+
+/* timer animation */
+
+#timer {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  box-sizing: border-box;
+  border: 1px solid black;
+  font-size: 40px;
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  background-color: greenyellow;
+  border-radius: 20px;
+  height: 120px;
+  margin-top: 20px;
+  margin-right: 5px;
+}
+
+/* score animation */
+#score {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  box-sizing: border-box;
+  border: 1px solid black;
+  font-size: 40px;
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  background-color: greenyellow;
+  border-radius: 20px;
+  height: 120px;
+  margin-top: 20px;
+  margin-right: 5px;
+}
+/* hen animation */
+.hen {
+  grid-row: 3/4;
+  grid-column: 2/3;
+  position: relative;
+  box-sizing: border-box;
+  background-image: url(https://bestanimations.com/Animals/Birds/Chickens/animated-chicken-rooster-gif-6.gif);
+  /* border: 1px solid black; */
+  background-repeat: no-repeat;
+  background-size: 150px;
+}
+/* .hen::before {
+  position: absolute;
+  /* content: url(./assets/animated-chicken-image-0081.gif); */
+/* background-image: url(https://bestanimations.com/Animals/Birds/Chickens/animated-chicken-rooster-gif-6.gif);
+  width: 100px;
+  height: 100px;
+  left: 4px;
+} */
+/* .hen::after {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 40px;
+  content: url(./assets/animated-chicken-image-0079.gif);
+} */
+
+/* applying animation on the element */
+/* /
+ */
+/* /
+  */
+
+@keyframes heating_the_egg {
+  0% {
+    transform: scale(0.1);
+    background-color: rgb(235, 235, 13);
+  }
+  20% {
+    transform: scale(0.2);
+    background-color: rgba(252, 186, 4, 0.966);
+  }
+  40% {
+    transform: scale(0.3);
+    background-color: rgb(231, 108, 6);
+  }
+  60% {
+    transform: scale(0.4);
+    background-color: orangered;
+  }
+  80% {
+    transform: scale(0.5);
+    background-color: rgb(255, 38, 0);
+  }
+  100% {
+    transform: scale(1);
+    background-color: rgb(255, 0, 0);
+  }
+}
+
+@keyframes breakingapartright {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  30% {
+    transform: rotate(25deg);
+  }
+  40% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(40deg);
+  }
+  60% {
+    transform: rotate(50deg);
+  }
+  70% {
+    transform: rotate(65deg);
+  }
+  80% {
+    transform: rotate(70deg);
+  }
+  90% {
+    transform: rotate(80deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes breakingapartleft {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(-20deg);
+  }
+  30% {
+    transform: rotate(-25deg);
+  }
+  40% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(-40deg);
+  }
+  60% {
+    transform: rotate(-50deg);
+  }
+  70% {
+    transform: rotate(-65deg);
+  }
+  80% {
+    transform: rotate(-70deg);
+  }
+  90% {
+    transform: rotate(-80deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+@keyframes falling_of_stone {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 400px;
+  }
+}
+
+/* move the stone to prevent collision */
+
+@keyframes prevent_collision {
+  from {
+    left: 20px;
+  }
+  to {
+    left: 0px;
+    visibility: hidden;
+  }
+}

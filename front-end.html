@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="front-end.css" />
+    <script type="text/javascript" src="app.js" type="module"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kufam:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="title"><h1>#The Egg</h1></div>
+    <div id="start_container">
+      <button id="start" onclick="start_the_game('front_game_design')">
+        Strat the game
+      </button>
+    </div>
+    <div id="instruction">
+      <p id="instruct">Instruction:-</p>
+      <ul>
+        <li><p>Click on the start game button to play the game</p></li>
+        <li><p>click on the egg to incubate the egg</p></li>
+        <li>
+          <p>
+            once incubation is going on protect the game from falling stone so
+            that chick can come out of it
+          </p>
+        </li>
+        <li><p>to protect the hover on the stone</p></li>
+        <li><p>to win the game player needs atleast 20 points</p></li>
+      </ul>
+    </div>
+    <div class="exterior-boundry">
+      <div class="interior-boundry" id="front_game_design">
+        <div class="falling-object falling-object-grid">
+          <div
+            class="stone-draw"
+            id="stone1"
+            onmousemove="movethestone()"
+          ></div>
+          <div
+            class="stone-draw"
+            id="stone2"
+            onmousemove="movethestone()"
+          ></div>
+          <div
+            class="stone-draw"
+            id="stone3"
+            onmousemove="movethestone()"
+          ></div>
+          <div
+            class="stone-draw"
+            id="stone4"
+            onmousemove="movethestone()"
+          ></div>
+          <div
+            class="stone-draw"
+            id="stone5"
+            onmousemove="movethestone()"
+          ></div>
+        </div>
+        <div id="timer"></div>
+        <div id="score">
+          <p>Score</p>
+        </div>
+        <div class="egg-class"></div>
+        <div class="egg">
+          <div
+            class="egg_design adjustment adjustement1"
+            id="eggbreak1"
+            onclick="change_heating_color1('clicktohatch1','eggbreak1','hatched1','stone1','imgchange1'); stone_falling_start();"
+          ></div>
+          <div
+            class="egg_design adjustment adjustement2"
+            id="eggbreak2"
+            onclick="change_heating_color2('clicktohatch2','eggbreak2','hatched2','stone2','imgchange2'); stone_falling_start();"
+          ></div>
+          <div
+            class="egg_design adjustment adjustement3"
+            id="eggbreak3"
+            onclick="change_heating_color4('clicktohatch3','eggbreak3','hatched3','stone3','imgchange3'); stone_falling_start();"
+          ></div>
+          <div
+            class="egg_design adjustment adjustement4"
+            id="eggbreak4"
+            onclick="change_heating_color3('clicktohatch4','eggbreak4','hatched4','stone4','imgchange4'); stone_falling_start();"
+          ></div>
+          <div
+            class="egg_design adjustment adjustement5"
+            id="eggbreak5"
+            onclick="change_heating_color5('clicktohatch5','eggbreak5','hatched5','stone5','imgchange5'); stone_falling_start();"
+          ></div>
+        </div>
+        <div class="egg_heating">
+          <div class="egg_heating_design adjustment1" id="clicktohatch1"></div>
+          <div class="egg_heating_design adjustment2" id="clicktohatch2"></div>
+          <div class="egg_heating_design adjustment3" id="clicktohatch3"></div>
+          <div class="egg_heating_design adjustment4" id="clicktohatch4"></div>
+          <div class="egg_heating_design adjustment5" id="clicktohatch5"></div>
+        </div>
+        <div class="egg-hatching">
+          <div class="egg_hatching_design adjustment1" id="hatched1">
+            <img
+              src="/assets/index.jpeg"
+              alt="not-loading"
+              width="90px"
+              height="120px"
+              id="imgchange1"
+            />
+          </div>
+          <div class="egg_hatching_design adjustment2" id="hatched2">
+            <img
+              src="/assets/index.jpeg"
+              alt="not-loading"
+              width="70px"
+              height="90px"
+              id="imgchange2"
+            />
+          </div>
+          <div class="egg_hatching_design adjustment3" id="hatched3">
+            <img
+              src="/assets/index.jpeg"
+              alt="not-loading"
+              width="70px"
+              height="90px"
+              id="imgchange3"
+            />
+          </div>
+          <div class="egg_hatching_design adjustment4" id="hatched4">
+            <img
+              src="/assets/index.jpeg"
+              alt="not-loading"
+              width="70px"
+              height="90px"
+              id="imgchange4"
+            />
+          </div>
+          <div class="egg_hatching_design adjustment5" id="hatched5">
+            <img
+              src="/assets/index.jpeg"
+              alt="not-loading"
+              width="70px"
+              height="90px"
+              id="imgchange5"
+            />
+          </div>
+        </div>
+        <div class="egg-stand"></div>
+        <div class="hen"></div>
+      </div>
+      <div id="win">
+        <img
+          src="https://media.tenor.com/images/5ec418d1a4ae4a449e13364f41db0e4e/tenor.gif"
+          alt="image is not loading"
+        />
+        <h1>You win!</h1>
+        <h1>Score</h1>
+        <h1>25</h1>
+      </div>
+      <div id="loose">
+        <img
+          src="https://media1.giphy.com/media/ftANXxDg0sOOmQSRmq/giphy.gif"
+          alt="not-loading"
+        />
+        <h1>You Loose!</h1>
+        <h1 id="loosemark"></h1>
+      </div>
+      <div class="controls">
+        <button id="resetgame" onClick="window.location.reload();">
+          Restart the game
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
