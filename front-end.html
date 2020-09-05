@@ -18,7 +18,10 @@
   <body>
     <div id="title"><h1>#The Egg</h1></div>
     <div id="start_container">
-      <button id="start" onclick="start_the_game('front_game_design')">
+      <button
+        id="start"
+        onclick="start_the_game('front_game_design'); randomtry(); timer();"
+      >
         Strat the game
       </button>
     </div>
@@ -43,27 +46,27 @@
           <div
             class="stone-draw"
             id="stone1"
-            onmousemove="movethestone()"
+            onmousemove="movethestone('stone1')"
           ></div>
           <div
             class="stone-draw"
             id="stone2"
-            onmousemove="movethestone()"
+            onmousemove="movethestone('stone2')"
           ></div>
           <div
             class="stone-draw"
             id="stone3"
-            onmousemove="movethestone()"
+            onmousemove="movethestone('stone3')"
           ></div>
           <div
             class="stone-draw"
             id="stone4"
-            onmousemove="movethestone()"
+            onmousemove="movethestone('stone4')"
           ></div>
           <div
             class="stone-draw"
             id="stone5"
-            onmousemove="movethestone()"
+            onmousemove="movethestone('stone5')"
           ></div>
         </div>
         <div id="timer"></div>
@@ -75,27 +78,27 @@
           <div
             class="egg_design adjustment adjustement1"
             id="eggbreak1"
-            onclick="change_heating_color1('clicktohatch1','eggbreak1','hatched1','stone1','imgchange1'); stone_falling_start();"
+            onclick="change_heating_color1('clicktohatch1','eggbreak1','hatched1','stone1','imgchange1');"
           ></div>
           <div
             class="egg_design adjustment adjustement2"
             id="eggbreak2"
-            onclick="change_heating_color2('clicktohatch2','eggbreak2','hatched2','stone2','imgchange2'); stone_falling_start();"
+            onclick="change_heating_color2('clicktohatch2','eggbreak2','hatched2','stone2','imgchange2');"
           ></div>
           <div
             class="egg_design adjustment adjustement3"
             id="eggbreak3"
-            onclick="change_heating_color4('clicktohatch3','eggbreak3','hatched3','stone3','imgchange3'); stone_falling_start();"
+            onclick="change_heating_color4('clicktohatch3','eggbreak3','hatched3','stone3','imgchange3');"
           ></div>
           <div
             class="egg_design adjustment adjustement4"
             id="eggbreak4"
-            onclick="change_heating_color3('clicktohatch4','eggbreak4','hatched4','stone4','imgchange4'); stone_falling_start();"
+            onclick="change_heating_color3('clicktohatch4','eggbreak4','hatched4','stone4','imgchange4');"
           ></div>
           <div
             class="egg_design adjustment adjustement5"
             id="eggbreak5"
-            onclick="change_heating_color5('clicktohatch5','eggbreak5','hatched5','stone5','imgchange5'); stone_falling_start();"
+            onclick="change_heating_color5('clicktohatch5','eggbreak5','hatched5','stone5','imgchange5');"
           ></div>
         </div>
         <div class="egg_heating">
